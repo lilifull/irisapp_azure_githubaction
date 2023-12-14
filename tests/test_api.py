@@ -1,6 +1,6 @@
 from fastapi.testclient import TestClient
 from app import app
-from model import IrisSpecies
+from Model import IrisSpecies
 
 client = TestClient(app)
 

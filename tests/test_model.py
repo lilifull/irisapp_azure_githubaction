@@ -1,5 +1,5 @@
 import pytest
-from model import IrisModel
+from Model import IrisModel
 
 def model_init(model_name):
     return IrisModel(model_name)
