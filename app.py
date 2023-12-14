@@ -5,6 +5,10 @@ from Model import IrisModel, IrisSpecies
 app = FastAPI()
 model = IrisModel('iris_model.pkl')
 
+@app.get("/")
+def read_root():
+    return {"Bienvenu dans l'irisappjlv :)"}
+
 @app.post('/predict')
 def predict_species(iris: IrisSpecies):
     data = iris.dict()
@@ -15,6 +19,7 @@ def predict_species(iris: IrisSpecies):
         'prediction': prediction,
         'probability': probability
     }
+
 
 
 if __name__ == '__main__':
