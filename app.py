@@ -1,6 +1,6 @@
 import uvicorn
 from fastapi import FastAPI
-from model import IrisModel, IrisSpecies
+from Model import IrisModel, IrisSpecies
 
 app = FastAPI()
 model = IrisModel('iris_model.pkl')
